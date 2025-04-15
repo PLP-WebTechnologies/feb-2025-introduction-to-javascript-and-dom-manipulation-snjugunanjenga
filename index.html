@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript DOM Assignment</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1 id="main-heading">Welcome to JavaScript Basics</h1>
+    <p>Learn how to manipulate the DOM and respond to user actions!</p>
+  </header>
+
+  <!-- Section for dynamic content update -->
+  <section class="js-section">
+    <h2 id="change-me">Click the button below to change this text</h2>
+    <button onclick="changeText()">Change Text</button>
+  </section>
+
+  <!-- Section for modifying styles -->
+  <section>
+    <h2>Style Manipulation</h2>
+    <button onclick="changeColor()">Make Background yellow</button>
+  </section>
+
+  <!-- Section for adding/removing elements -->
+  <section>
+    <h2>Add or Remove Info</h2>
+    <button onclick="addElement()">Add Info</button>
+    <button onclick="removeElement()">Remove Info</button>
+    <div id="dynamic-container"></div>
+  </section>
+
+  <!-- Form section to demonstrate JavaScript input handling -->
+  <section>
+    <h2>Student Info Form</h2>
+    <form id="studentForm" onsubmit="handleSubmit(event)">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required />
+      <br />
+      <label for="email">Email:</label>
+      <input type="email" id="email" required />
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+    <div id="formOutput"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    Author: Cpt. SNN <br />
+    Institution: PLP Academy Feb 2025 Cohort <br />
+    &copy; Copyrights
+  </footer>
+
+  <!-- Link to external JS -->
+  <script src="script.js"></script>
+</body>
+</html>
