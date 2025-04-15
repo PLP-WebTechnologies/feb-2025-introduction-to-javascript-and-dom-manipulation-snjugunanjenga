@@ -48,3 +48,45 @@ function changeText() {
     document.getElementById("studentForm").reset();
   }
   
+ 
+
+// Toggle Dark/Light Mode using event listener
+document.getElementById("toggleTheme").addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+  });
+  
+  // Mouseover & Mouseout Example
+  const mouseText = document.getElementById("mouseTarget");
+  mouseText.addEventListener("mouseover", () => {
+    mouseText.style.color = "tomato";
+  });
+  mouseText.addEventListener("mouseout", () => {
+    mouseText.style.color = "black";
+  });
+  
+  // Animate box on click (not just hover)
+  document.getElementById("animateBox").addEventListener("click", () => {
+    const box = document.getElementById("animateBox");
+    box.style.transform = "scale(1.3)";
+    setTimeout(() => {
+      box.style.transform = "scale(1)";
+    }, 500);
+  });
+  
+  // Create dynamic cards on button click
+  document.getElementById("addCard").addEventListener("click", () => {
+    const container = document.getElementById("cardContainer");
+  
+    const card = document.createElement("div");
+    card.classList.add("card");
+  
+    const randomId = Math.floor(Math.random() * 1000);
+    card.innerHTML = `
+      <h4>👤 Student #${randomId}</h4>
+      <p>Generated using JS</p>
+      <button onclick="alert('Student #${randomId} says hello!')">Say Hi</button>
+    `;
+  
+    container.appendChild(card);
+  });
+  
